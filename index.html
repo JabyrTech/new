@@ -29,6 +29,16 @@
       .more .learnmore {
   scroll-snap-align: center;
 }
+
+      body::-webkit-scrollbar, section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+section, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
       
 
     </style>
