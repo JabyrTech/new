@@ -97,12 +97,14 @@ body{
 
 .topper {
   position: absolute;
-  background: #e1e1e1;
-  background-image: url('../static/pexels-vlad-chețan-2892619.jpg');
+  background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: linear-gradient(109deg, #152556 0%, #71C4FFFF 100%);
+ /* background-image: url('../static/pexels-vlad-chețan-2892619.jpg'); */
   width: 100%;
   top: 0;
   height: 30% !important;
-  /* background: linear-gradient(#dae0ec 10%, #e0e6f2, #eef5fe, white 64%, #dbe3f0 74%,#f2f7fd); */
+   /* background: linear-gradient(#dae0ec 10%, #e0e6f2, #eef5fe, white 64%, #dbe3f0 74%,#f2f7fd); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -640,30 +642,10 @@ input[type="search"]:focus {
 }
 
 @media (min-width: 900px) {
-  main, .index-main, .topper {
-    width: 80% !important;
-    margin-left: 20%;
-  }
   body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .nav--icons {
-    width: 16%;
-    padding: 2%;
-    height: 98lvh;
-    top: 0;
-    background: white;
-    display: flex;
-    align-items: flex-start;
-    box-shadow: none;
-    border-right: 1px solid gray;
-    
-  }
-
-  .nav-profile {
-    display: flex;
   }
 
   .nav--icons ul li a span,
@@ -812,8 +794,42 @@ input[type="search"]:focus {
 
   }
 
+  .one {
+    padding: 2%;
+    justify-content: space-between;
+  }
+
+  .circle {
+    margin: 0 10% 0 0;
+    padding: 0;
+  }
+
   .one a {
-    width: 200px;
+    width: 20%;
+  }
+
+  .one a .part {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff !important;
+    padding: 5%;
+
+    .circle {
+      height: 70px;
+      width: 70px;
+
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
   }
 
 
@@ -857,74 +873,38 @@ input[type="search"]:focus {
     display: none;
   }
 
-  .sidenav {
-    height: 100%;
-    width: 100%;
+
+
+  .topper .message {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    margin-top: 70px;
+    /* background-image: url('../static/Cityscapes - Town.png') !important; */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 700px;
+    background: linear-gradient(#dae0ec 10%, #e0e6f2, #eef5fe, white 64%, #dbe3f0 74%,#f2f7fd) !important;
 
-  }
-
-  .nav-profile {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-    white-space: none;
-    border-radius: 10px;
-    padding: 5%;
-    margin-bottom: 20px;
-    p {
-      margin: 0;
+    h1 {
+      font-size: 40px !important;
+      color: darkorange;
     }
   }
-
-
-  .nav-profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  
+  .topper img {
+    width: 200px;
+    position: sticky;
+    top: 100px;
+    display: block !important;
+  
   }
 
-  .sidenav-links {
-    display: flex;
-    flex-direction: column;
-    height: 45lvh;
-    overflow-y: scroll;
-    border-radius: 10px;
-    padding: 5%;
-    width: 100%;
-    color: gray;
-    scrollbar-width: 20px;
-    
+  .learn{
+    display:block;
   }
-
-  .sidenav-links a {
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    
+  .wel {
+    display: none;
   }
-
-  .sidenav-links .active {
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 2px 2px 5px gray;
-    color: skyblue;
-  }
-
-  .sidenav-links a:hover {
-    color: orangered;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    transition: 0.5s;
-    box-shadow: 2px 2px 5px gray;
-  }
-
   .sidenav {
     .card {
       width: 190px;
@@ -993,6 +973,8 @@ input[type="search"]:focus {
       font-size: 12px;
       color: rgba(128, 155, 29, 0.452);
     }
+
+    
   }
 }
 
@@ -1555,4 +1537,54 @@ input[type="search"]:focus {
 
 .one img {
   height: 100px !important;
+}
+
+
+.topper img {
+  display: none;
+}
+
+.learn{
+  display:none;
+}
+.wel {
+  display: block;
+}
+
+.learnmore:hover {
+  border: 2px solid;
+}
+.learnmore {
+  width: 36% !important;
+  min-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  margin: 2%;
+  p {
+    padding: 2%;
+    text-align: center ;
+
+    color: white;
+  }
+
+  .img {
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+  
+  }
+}
+
+.more {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
 }
