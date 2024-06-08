@@ -908,12 +908,6 @@ input[type="search"]:focus {
   
   }
 
-  .learn{
-    display:block;
-  }
-  .wel {
-    display: none;
-  }
   .sidenav {
     .card {
       width: 190px;
