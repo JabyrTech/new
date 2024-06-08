@@ -1,3 +1,12 @@
+*::-webkit-scrollbar, section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 body{
     /* background: linear-gradient(45deg, to right, #f12711, #f5af19); */
 
