@@ -3,6 +3,7 @@
 
 ## Demo
 
-https://scientific-calculator.onrender.com
+Jabir Nasir Argungu
+Founder/CEO
 
 
