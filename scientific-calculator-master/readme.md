@@ -1,7 +1,7 @@
 
 # Scientific Calculator
 
-## Demo
+## Built by
 
 Jabir Nasir Argungu
 Founder/CEO
