@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scrollbar-width: none; /*for Firefox */
+}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer !important;
+  }
+  
+  
+  .wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+  }
+  .phone {
+    border: 2px solid #eee;
+    background: #fff;
+    border-radius: 2em;
+    position: relative;
+    padding-bottom: 170%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+  }
+  .nav--icons {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray;
+    padding: 2%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .nav--icons ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .nav--icons ul li a {
+    font-family: sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000;
+    line-height: 1;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    border-radius: 3em;
+    padding: 0.75em 1.25em;
+    transition: 0.6s ease-in-out;
+  }
+  .nav--icons ul li a span {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    padding-left: 0.5em;
+    transform: translate3d(-0.5em, 0, 0);
+    transition: opacity 0.6s, max-width 0.6s, transform 0.6s;
+    transition-timing-function: ease-in-out;
+  }
+  .nav--icons ul li a:hover,
+  .nav--icons ul li a.is-active {
+    color: #fff;
+    background-color: #000;
+  }
+  .nav--icons ul li a:hover span,
+  .nav--icons ul li a.is-active span {
+    opacity: 1;
+    max-width: 40px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  
+::-webkit-scrollbar {
+  width: 0;
+}
+.calDiv {
+  width: 23rem;
+  padding: 0.6rem;
+  max-height: 100%;
+  box-shadow: 0rem 0rem 0.25rem 0.0625rem grey;
+}
+.calDiv__btn {
+  background-color: white;
+  height: 2.5rem;
+  color: black;
+  width: 4.3rem;
+  margin: 0rem 0.1rem;
+  white-space: nowrap;
+  border-radius: 0;
+}
+:where(.calDiv__btn:hover, .calDiv__dropdownBtn--shadow):hover {
+  background-color: rgba(131, 131, 131, 0.35);
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.31rem 0.5rem;
+  border-radius: 0;
+}
+.calDiv__dropdownBtn--size {
+  width: 3.9rem;
+  height: 2.6rem;
+  margin: 0.15rem 0.15rem;
+}
+.calDiv__btn--blue {
+  background-color: #6690ce !important;
+}
+.calDiv__btn--blue:hover {
+  background-color: #4b6da0;
+  box-shadow: #6690ce 0rem 0.31rem 0.94rem;
+}
+.calDiv__removeImg--size {
+  width: 1.5rem;
+}
+.calDiv__removeImg--size {
+  width: 1.5rem;
+}
+.calDiv__trigonoImg--size {
+  transform: rotate(270deg);
+  width: 1.1rem;
+}
+.calDiv__arrowDownImg--size {
+  width: 0.7rem;
+}
+.calDiv__inputField {
+  height: 7rem;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  text-align: right;
+  overflow-y: scroll;
+  border: none;
+  resize: none;
+  background-color: #f8f9fa !important;
+}
+.calDiv__fnImg--size {
+  width: 1.2rem;
+}
+.calDiv_drawer {
+  position: absolute;
+  height: 26rem;
+  text-align: right;
+  z-index: 1;
+  background-color: #f8f9fa;
+  border: 0.01rem solid rgba(131, 131, 131, 0.35);
+  border-radius: 0.5rem 1rem 0rem 0rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0.1rem 0.03rem 0.31rem;
+  display: none;
+}
+.calDiv__closeBtn--color {
+  background-color: #f8f9fa;
+}
+.calDiv__closeImg--size {
+  width: 1.2rem;
+}
+.calDiv__deleteBtnDiv {
+  position: absolute;
+  top: calc(100% - 3.2rem);
+  right: 0.2rem;
+}
+.calDiv__deleteBtn--color {
+  padding: 0.2rem;
+  background-color: #f8f9fa;
+}
+.calDiv__deleteImg--size {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.calDiv__numsDiv {
+  margin-top: 0.5rem;
+  max-height: 72%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.calDiv__ErrMsgDiv {
+  text-align: justify;
+}
+
+/* responsive media queries */
+@media only screen and (max-width: 415px), (max-height: 600px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+
+
+.top-header {
+  font-size: xx-small;
+  background-color: white;
+  padding: 5% 2%;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.top-header img {
+  margin-right: 5%;
+}
+
+
+
+
+
+.chat {
+  height: 100%;
+  width: 100% !important;
+  margin: 0 !important;
+  top: 0;
+  bottom: 0 !important;
+}
+
+.chat .header {
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+.chat-container {
+  height: 100% !important;
+}
+
+.chat-form {
+  justify-content: center;
+  bottom: 0;
+  position: fixed !important;
+}
+
+
+.chat {
+  position: fixed;
+  bottom: 100px;
+  width: 90%;
+  margin-left: 5%;
+  display: none;
+
+  
+}
+
+.chat .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: skyblue;
+  margin-top: 60px;
+  position: static;
+  top: 0;
+  font-size: x-small;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  padding: 2%;
+
+}
+.chat .header img {
+  width: 50px;
+  border-radius: 50px;
+  margin: 2%;
+}
+.chat-container {
+  background-color: #f1f1f1;
+  padding: 5% 0;
+  padding-bottom: 0;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.24);
+  height: 350px;
+  overflow-y: scroll;
+  
+}
+
+.tanda, .you {
+  background-color: white;
+  padding: 1% 2%;
+  margin-top: 3%;
+  border-radius: 20px;
+  max-width: 70%;
+  box-shadow: 8px 7px 20px rgba(0, 0, 0, 0.05) ;
+}
+
+.tanda {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 30%;
+  border-radius: 0 20px 20px;
+  scroll-snap-type: mandatory;
+}
+
+.you {
+  margin-left: 30%;
+  margin-right: 5%;
+  border-radius: 20px 0 20px 20px;
+
+}
+
+.chat-form{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  padding: 0;
+  position: fixed;
+  background: #f1f1f1;
+  width: 100%;
+}
+
+.chat-form input {
+  width: 83% !important;
+  padding: 2% 5% !important;
+  border: 1px solid skyblue;
+  height: 0;
+  margin: 0;
+  height: 40%;
+}
+
+.chat-form button {
+  background-color: orangered;
+  color: white;
+  padding: 2%;
+  border: 1px solid orangered;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+
+
+.chat .header button {
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: red;
+  color: white;
+
+}
+
+
+.chatmessages {
+  height: 83%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
