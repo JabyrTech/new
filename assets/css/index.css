@@ -480,6 +480,7 @@ max.images{
 }
 .sections a {
   width: 40% !important;
+  max-width: 150px !important;
   font-size: smaller !important;
   height: 50%;
 
